@@ -1,0 +1,38 @@
+package com.wf.view;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import com.wf.view.bezier.BezierCubicActivity;
+import com.wf.view.bezier.BezierQuadActivity;
+import com.wf.view.bezier.R;
+import com.wf.view.bezier.WaveViewActivity;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    //二次曲线
+    public void bezierQuad(View view) {
+        Intent intent  = new Intent(MainActivity.this, BezierQuadActivity.class);
+        startActivity(intent);
+    }
+
+    //三次曲线
+    public void bezierCubic(View view) {
+        Intent intent  = new Intent(MainActivity.this, BezierCubicActivity.class);
+        startActivity(intent);
+    }
+
+    //水纹波动
+    public void waveView(View view) {
+        Intent intent  = new Intent(MainActivity.this, WaveViewActivity.class);
+        startActivity(intent);
+    }
+}
