@@ -13,18 +13,28 @@
         android:id="@+id/layout_merge"
         layout="@layout/optimize_viewstub_item_merge" />
 
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_content"
+        android:background="@color/chg_wave2"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"/>
+
+
     <ViewStub
         android:id="@+id/viewstub_demo_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_content"
+        android:layout_below="@+id/view_line"
         android:layout_margin="10dp"
         android:layout="@layout/optimize_viewstub_textview"/>
     <ViewStub
         android:id="@+id/viewstub_demo_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_content"
+        android:layout_below="@+id/view_line"
         android:layout_margin="10dp"
         android:layout="@layout/optimize_viewstub_imageview"/>
 

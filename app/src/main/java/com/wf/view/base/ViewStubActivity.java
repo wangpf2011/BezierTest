@@ -34,7 +34,7 @@ public class ViewStubActivity extends BaseActivity {
             ViewStub stub = (ViewStub) findViewById(R.id.viewstub_demo_image);
             stub.inflate();
             ImageView image = (ImageView) findViewById(R.id.viewstub_demo_imageview);
-            image.setImageResource(R.mipmap.ic_vehicle);
+            image.setImageResource(R.mipmap.ic_bleheadericon);
         }
 
     }

@@ -13,7 +13,7 @@ import com.wf.view.bezier.R;
 import com.wf.view.utils.DensityUtil;
 
 /**
- * 自定义ImageView+TextView
+ * 基于LinearLayout自定义ImageView+TextView
  *
  * Created by wangpf
  * Created at 2018/9/17 15:20
