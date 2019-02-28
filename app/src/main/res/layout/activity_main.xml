@@ -7,13 +7,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="二次曲线"
+        android:text="自定义View"
+        android:onClick="customView"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="贝塞尔二次曲线"
         android:onClick="bezierQuad"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="三次曲线"
+        android:text="贝塞尔三次曲线"
         android:onClick="bezierCubic"/>
     <Button
         android:layout_width="match_parent"
@@ -21,5 +27,12 @@
         android:layout_margin="10dp"
         android:text="水纹波动"
         android:onClick="waveView"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="界面优化ViewStub"
+        android:onClick="viewStub"/>
 
 </LinearLayout>

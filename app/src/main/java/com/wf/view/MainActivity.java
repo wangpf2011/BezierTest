@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.wf.view.base.CustomViewActivity;
+import com.wf.view.base.ViewStubActivity;
 import com.wf.view.bezier.BezierCubicActivity;
 import com.wf.view.bezier.BezierQuadActivity;
 import com.wf.view.bezier.R;
@@ -16,6 +18,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    //自定义View
+    public void customView(View view) {
+        Intent intent  = new Intent(MainActivity.this, CustomViewActivity.class);
+        startActivity(intent);
     }
 
     //二次曲线
@@ -33,6 +41,12 @@ public class MainActivity extends Activity {
     //水纹波动
     public void waveView(View view) {
         Intent intent  = new Intent(MainActivity.this, WaveViewActivity.class);
+        startActivity(intent);
+    }
+
+    //界面优化ViewStub
+    public void viewStub(View view) {
+        Intent intent  = new Intent(MainActivity.this, ViewStubActivity.class);
         startActivity(intent);
     }
 }
