@@ -39,20 +39,20 @@ public class MyView extends View {
         super.onDraw(canvas);
 
         mPaint.setColor(Color.RED);
-        canvas.drawCircle(100, 100, 100, mPaint); //绘制一个圆，圆心(100, 100), 半径100
+        canvas.drawCircle(150, 150, 100, mPaint); //绘制一个圆，圆心(100, 100), 半径100
 
         canvas.save();
-        canvas.translate(250, 0);  //坐标系向右移动250
+        canvas.translate(0, 300);  //坐标系向右移动250
 
         mPaint.setColor(Color.GRAY);
-        canvas.drawRect(0, 0, 200, 200, mPaint);  //在新的坐标系中画一个200x200的正方形
+        canvas.drawRect(50, 0, 250, 200, mPaint);  //在新的坐标系中画一个200x200的正方形
 
         mPaint.setColor(Color.YELLOW);
 
         Path path = new Path();
-        path.moveTo(500, 0);
-        path.lineTo(700, 0);
-        path.lineTo(500, 200);
+        path.moveTo(50, 500);
+        path.lineTo(250, 500);
+        path.lineTo(50, 700);
         path.close();
         canvas.drawPath(path, mPaint);   //在新的坐标系中画一个三角形
         canvas.restore();
