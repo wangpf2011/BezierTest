@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".WaveViewActivity" />
+        <activity android:name=".PageViewActivity" />
         <activity android:name=".BezierCubicActivity" />
         <activity android:name=".BezierQuadActivity" />
         <activity android:name="com.wf.view.base.CustomViewActivity" />

@@ -9,6 +9,7 @@ import com.wf.view.base.CustomViewActivity;
 import com.wf.view.base.ViewStubActivity;
 import com.wf.view.bezier.BezierCubicActivity;
 import com.wf.view.bezier.BezierQuadActivity;
+import com.wf.view.bezier.PageViewActivity;
 import com.wf.view.bezier.R;
 import com.wf.view.bezier.WaveViewActivity;
 
@@ -41,6 +42,12 @@ public class MainActivity extends Activity {
     //水纹波动
     public void waveView(View view) {
         Intent intent  = new Intent(MainActivity.this, WaveViewActivity.class);
+        startActivity(intent);
+    }
+
+    //翻页效果
+    public void pageView(View view) {
+        Intent intent  = new Intent(MainActivity.this, PageViewActivity.class);
         startActivity(intent);
     }
 
