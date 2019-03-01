@@ -17,6 +17,6 @@ public class WaveViewActivity extends BaseActivity {
         pageName = "WaveViewActivity";
 
         WaveView waveView = (WaveView)findViewById(R.id.waveView);
-        waveView.startAnimation();
+        waveView.waveAnimation();
     }
 }

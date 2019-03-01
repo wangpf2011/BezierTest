@@ -15,8 +15,8 @@ public class ChargeMonitorActivity extends BaseActivity {
         pageName = "ChargeMonitorActivity";
 
         ChargeMonitorView waveView1 = (ChargeMonitorView)findViewById(R.id.waveView1);
-        waveView1.startAnimation();
+        waveView1.waveAnimation();
         ChargeMonitorView waveView2 = (ChargeMonitorView)findViewById(R.id.waveView2);
-        waveView2.startAnimation();
+        waveView2.waveAnimation();
     }
 }

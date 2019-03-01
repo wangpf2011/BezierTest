@@ -91,7 +91,7 @@ public class ChargeMonitorView extends View {
         canvas.drawPath(path, mPaint);
     }
 
-    public void startAnimation() {
+    public void waveAnimation() {
         ValueAnimator valueAnimator = ValueAnimator.ofInt(0, mWaveDx);
         valueAnimator.setDuration(2000);
         valueAnimator.setRepeatCount(ValueAnimator.INFINITE);

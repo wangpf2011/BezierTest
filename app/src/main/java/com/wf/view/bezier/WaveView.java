@@ -79,15 +79,18 @@ public class WaveView extends View {
         canvas.drawPath(path, mPaint);
     }
 
-    public void startAnimation() {
+    public void waveAnimation() {
+        // valueAnimator对象，初始值为0，结束值为mWaveDx，mWaveDx为整个屏幕宽度
         ValueAnimator valueAnimator = ValueAnimator.ofInt(0, mWaveDx);
+        // 设置属性动画时长
         valueAnimator.setDuration(2000);
+        // 无线重复动画
         valueAnimator.setRepeatCount(ValueAnimator.INFINITE);
         valueAnimator.setInterpolator(new LinearInterpolator());
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                //水平方向的偏移量
+                //水平方向的偏移量，值的区间为0~mWaveDx，根据偏移量重绘贝塞尔曲线
                 dx = (int)animation.getAnimatedValue();
                 invalidate();
             }
