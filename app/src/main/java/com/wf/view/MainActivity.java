@@ -9,6 +9,7 @@ import com.wf.view.base.CustomViewActivity;
 import com.wf.view.base.ViewStubActivity;
 import com.wf.view.bezier.BezierCubicActivity;
 import com.wf.view.bezier.BezierQuadActivity;
+import com.wf.view.bezier.ChargeMonitorActivity;
 import com.wf.view.bezier.PageViewActivity;
 import com.wf.view.bezier.R;
 import com.wf.view.bezier.WaveViewActivity;
@@ -42,6 +43,12 @@ public class MainActivity extends Activity {
     //水纹波动
     public void waveView(View view) {
         Intent intent  = new Intent(MainActivity.this, WaveViewActivity.class);
+        startActivity(intent);
+    }
+
+    //车辆充电效果
+    public void chargeMonitor(View view) {
+        Intent intent  = new Intent(MainActivity.this, ChargeMonitorActivity.class);
         startActivity(intent);
     }
 

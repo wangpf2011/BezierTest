@@ -12,6 +12,17 @@
         <attr name="waveLength" format="integer"></attr>
     </declare-styleable>
 
+    <declare-styleable name="ChargeMonitorView">
+        <!--水波纹的高度-->
+        <attr name="monitorWaveHeight" format="integer"></attr>
+        <!--水波纹的长度-->
+        <attr name="monitorWaveLength" format="integer"></attr>
+        <!--水波纹填充颜色-->
+        <attr name="monitorWaveColor" format="color"></attr>
+        <!--水波纹起点X坐标偏移-->
+        <attr name="monitorWaveMoveTox" format="boolean"></attr>
+    </declare-styleable>
+
     <declare-styleable name="HorizontalTextView">
         <attr name="htextStr" format="string"/>
         <attr name="htextColor" format="color"/>

@@ -20,6 +20,7 @@
         <activity android:name=".PageViewActivity" />
         <activity android:name=".BezierCubicActivity" />
         <activity android:name=".BezierQuadActivity" />
+        <activity android:name=".ChargeMonitorActivity" />
         <activity android:name="com.wf.view.base.CustomViewActivity" />
         <activity android:name="com.wf.view.base.ViewStubActivity" />
     </application>

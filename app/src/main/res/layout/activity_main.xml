@@ -31,6 +31,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:text="车辆充电效果"
+        android:onClick="chargeMonitor"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="翻页效果"
         android:onClick="pageView"/>
 

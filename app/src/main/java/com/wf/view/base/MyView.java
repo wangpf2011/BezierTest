@@ -50,9 +50,9 @@ public class MyView extends View {
         mPaint.setColor(Color.YELLOW);
 
         Path path = new Path();
-        path.moveTo(50, 500);
-        path.lineTo(250, 500);
-        path.lineTo(50, 700);
+        path.moveTo(50, 400);
+        path.lineTo(250, 400);
+        path.lineTo(50, 600);
         path.close();
         canvas.drawPath(path, mPaint);   //在新的坐标系中画一个三角形
         canvas.restore();

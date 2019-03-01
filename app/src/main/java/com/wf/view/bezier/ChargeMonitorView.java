@@ -2,8 +2,8 @@ package com.wf.view.bezier;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.support.annotation.Nullable;
@@ -20,31 +20,43 @@ import com.wf.view.utils.MeasureUtils;
  * Created by wangpf
  * Created at 2018/9/17 14:49
  */
-public class WaveView extends View {
+public class ChargeMonitorView extends View {
     private Paint mPaint;
     private int mWidth;
     private int mHeight;
     private int mWaveHeight;
     private int mWaveDx;
     private int dx;
+    private int offsetx;
 
-    public WaveView(Context context) {
+    public ChargeMonitorView(Context context) {
         this(context, null);
     }
 
-    public WaveView(Context context, @Nullable AttributeSet attrs) {
+    public ChargeMonitorView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public WaveView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ChargeMonitorView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+
+        TypedArray typedArray = context.obtainStyledAttributes(attrs,
+                R.styleable.ChargeMonitorView);
+        int waveColor = typedArray.getColor(R.styleable.ChargeMonitorView_monitorWaveColor,
+                0XFFFFFFFF);
+        boolean monitorWaveMoveTox = typedArray.getBoolean(R.styleable.ChargeMonitorView_monitorWaveMoveTox,
+                false);
+
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mPaint.setDither(true);
-        mPaint.setColor(getResources().getColor(R.color.chg_wave2));
+        mPaint.setColor(waveColor);
         mPaint.setStyle(Paint.Style.FILL);
         //波长的的长度(这里设置为屏幕的宽度)
         mWaveDx = getResources().getDisplayMetrics().widthPixels;
+        if(monitorWaveMoveTox) {
+            offsetx = mWaveDx / 4;
+        }
     }
 
     @Override
@@ -54,7 +66,7 @@ public class WaveView extends View {
         mWidth = MeasureUtils.measureView(widthMeasureSpec, mWaveDx);
         mHeight = MeasureUtils.measureView(heightMeasureSpec, 300);
         //水波的高度16dp，转换为像素px
-        mWaveHeight = DensityUtil.dip2px(getContext(), 16);
+        mWaveHeight = DensityUtil.dip2px(getContext(), 20);
     }
 
     @Override
@@ -67,7 +79,7 @@ public class WaveView extends View {
     private void drawWave(Canvas canvas) {
         Path path = new Path();
         path.reset();
-        path.moveTo(-mWaveDx + dx, mHeight / 2);
+        path.moveTo(-mWaveDx + dx + offsetx, mHeight / 2);
         for (int i = -mWaveDx; i < getWidth() + mWaveDx; i += mWaveDx) {
             path.rQuadTo(mWaveDx / 4, -mWaveHeight, mWaveDx / 2, 0);
             path.rQuadTo(mWaveDx / 4, mWaveHeight, mWaveDx / 2, 0);

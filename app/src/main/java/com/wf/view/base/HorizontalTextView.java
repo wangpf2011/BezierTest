@@ -26,11 +26,11 @@ public class HorizontalTextView extends LinearLayout {
     private LayoutParams textLayoutParams;
 
     public HorizontalTextView(Context context) {
-        super(context);
+        super(context, null);
     }
 
     public HorizontalTextView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        super(context, attrs, 0);
         init(context, attrs);
     }
 
@@ -42,8 +42,7 @@ public class HorizontalTextView extends LinearLayout {
     private void init(Context context, AttributeSet attrs) {
         this.setOrientation(LinearLayout.HORIZONTAL);
         try {
-            TypedArray typedArray = context.obtainStyledAttributes(attrs,
-                    R.styleable.HorizontalTextView);
+            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.HorizontalTextView);
 
             mImageView = new ImageView(context);
             imageLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
